@@ -1,0 +1,31 @@
+     CREATE TABLE                                                       
+       BMGVZP.KANJI_DATA_T                                              
+        (                                                               
+        TEXT_XREF_NBR   INTEGER NOT NULL WITH DEFAULT                   
+       ,TEXT_LINE_NUM   INTEGER NOT NULL WITH DEFAULT                   
+       ,TEXT_POINTER_CD   VARCHAR(8) NOT NULL                                                                              
+       ,TEXT_KEY   VARCHAR(100) NOT NULL                                                                                   
+       ,TEXT_STRING   VARCHAR(2000) NOT NULL                                                                            
+       ,VAMLOAD_DATE   DATE NOT NULL WITH DEFAULT  
+       ,PRIMARY KEY (
+      TEXT_XREF_NBR,
+TEXT_LINE_NUM)                      
+        );                                                                  
+     CREATE UNIQUE                                                      
+        INDEX APPLDBA.KANJIDAT1                                         
+       ON BMGVZP.KANJI_DATA_T                                           
+        (                                                               
+         TEXT_XREF_NBR ASC                                              
+        ,TEXT_LINE_NUM ASC                                              
+        )                                                                     
+     ;                                                                  
+     CREATE                                                             
+        INDEX APPLDBA.KANJIDAT2                                         
+       ON BMGVZP.KANJI_DATA_T                                           
+        (                                                               
+         TEXT_XREF_NBR ASC                                              
+        ,TEXT_LINE_NUM ASC                                              
+        ,TEXT_KEY ASC                                                   
+        )                                                                     
+     ;                                                                  
+

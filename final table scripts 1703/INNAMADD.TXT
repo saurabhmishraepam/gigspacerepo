@@ -1,0 +1,80 @@
+     CREATE TABLE                                                       
+       BMGVZP.INTL_NAME_ADDRESS                                         
+        (                                                               
+        MAN   VARCHAR(13) NOT NULL WITH DEFAULT                            
+                                                           
+       ,MAN_BILL_DATE   DATE NOT NULL WITH DEFAULT                      
+       ,BAN   VARCHAR(13) NOT NULL WITH DEFAULT                            
+                                                           
+       ,BILL_DATE   DATE NOT NULL WITH DEFAULT                          
+       ,ORIG_SYSTEM_ID   VARCHAR(2) NOT NULL WITH DEFAULT                  
+                                                           
+       ,ABAN   VARCHAR(13) NOT NULL WITH DEFAULT                           
+                                                           
+       ,VZ450_SEQ_NBR   INTEGER NOT NULL WITH DEFAULT                   
+       ,ADDRESS_CTGY_ID   CHAR(1) NOT NULL WITH DEFAULT                 
+                                                           
+       ,ACCT_NAME   VARCHAR(60) NOT NULL WITH DEFAULT                      
+                                                           
+       ,CONTACT_NAME   VARCHAR(25) NOT NULL WITH DEFAULT                   
+                                                           
+       ,ADDRESS_1   VARCHAR(60) NOT NULL WITH DEFAULT                      
+                                                           
+       ,ADDRESS_2   VARCHAR(60) NOT NULL WITH DEFAULT                      
+                                                           
+       ,ADDRESS_3   VARCHAR(60) NOT NULL WITH DEFAULT                      
+                                                           
+       ,ADDRESS_4   VARCHAR(60) NOT NULL WITH DEFAULT                      
+                                                           
+       ,COUNTRY   VARCHAR(40) NOT NULL WITH DEFAULT                        
+                                                           
+       ,DISTRICT   VARCHAR(40) NOT NULL WITH DEFAULT                       
+                                                           
+       ,PROVINCE   VARCHAR(40) NOT NULL WITH DEFAULT                       
+                                                           
+       ,CITY   VARCHAR(40) NOT NULL WITH DEFAULT                           
+                                                           
+       ,STATE   VARCHAR(2) NOT NULL WITH DEFAULT                           
+                                                           
+       ,CUSTOMER_NAME   VARCHAR(30) NOT NULL WITH DEFAULT                  
+                                                           
+       ,POSTAL_CD   VARCHAR(15) NOT NULL WITH DEFAULT                      
+                                                           
+       ,COUNTRY_NAME   VARCHAR(60) NOT NULL WITH DEFAULT                   
+                                                           
+       ,ADDR_SEQ_NBR   INTEGER NOT NULL WITH DEFAULT                    
+       ,ADDR_SEQ_CD   INTEGER NOT NULL WITH DEFAULT                     
+       ,LOCATION_ID   VARCHAR(30) NOT NULL WITH DEFAULT                    
+                                                           
+       ,ADDRESS_5   VARCHAR(100) NOT NULL WITH DEFAULT                     
+                                                           
+       ,SUB_REC_NBR   VARCHAR(2) NOT NULL WITH DEFAULT                     
+                                                           
+       ,BIN_FILE_SEQ_NBR   INTEGER NOT NULL WITH DEFAULT                
+       ,TEXT_POINTER_CD   VARCHAR(8) NOT NULL WITH DEFAULT                 
+                                                           
+       ,SUB_CIC   VARCHAR(5) NOT NULL WITH DEFAULT                         
+                                                           
+       ,CGI_NAME   VARCHAR(100) NOT NULL WITH DEFAULT                      
+                                                           
+       ,VAMLOAD_DATE   DATE NOT NULL WITH DEFAULT     
+       ,PRIMARY KEY (
+      MAN,
+MAN_BILL_DATE,
+ORIG_SYSTEM_ID,
+VZ450_SEQ_NBR)            
+                                                         
+                  
+        )                                                                
+     ;                                                                  
+     CREATE UNIQUE                                                      
+        INDEX BMGVZP.INNAMAU1                                           
+       ON BMGVZP.INTL_NAME_ADDRESS                                      
+        (                                                               
+         MAN ASC                                                        
+        ,MAN_BILL_DATE ASC                                              
+        ,ORIG_SYSTEM_ID ASC                                             
+        ,VZ450_SEQ_NBR ASC                                              
+        )                                                                     
+     ;                                                                  
+
